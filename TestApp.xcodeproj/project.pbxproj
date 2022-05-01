@@ -21,6 +21,11 @@
 		404EA31E280BEEA100E5B17F /* TestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404EA31D280BEEA100E5B17F /* TestAppUITestsLaunchTests.swift */; };
 		406130B9280F228D0065EF86 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406130B8280F228D0065EF86 /* RowController.swift */; };
 		406130BB280F24B40065EF86 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406130BA280F24B30065EF86 /* HomeController.swift */; };
+		406130BD28107E4B0065EF86 /* NearMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406130BC28107E4B0065EF86 /* NearMeController.swift */; };
+		4081657A28155611002D3462 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081657928155611002D3462 /* LocationManager.swift */; };
+		4081657C2815714E002D3462 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081657B2815714E002D3462 /* PaymentsController.swift */; };
+		4081657E2815723A002D3462 /* FeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081657D2815723A002D3462 /* FeatureController.swift */; };
+		408165802815C9C9002D3462 /* PinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081657F2815C9C9002D3462 /* PinController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,11 @@
 		404EA31D280BEEA100E5B17F /* TestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		406130B8280F228D0065EF86 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		406130BA280F24B30065EF86 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		406130BC28107E4B0065EF86 /* NearMeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeController.swift; sourceTree = "<group>"; };
+		4081657928155611002D3462 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4081657B2815714E002D3462 /* PaymentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsController.swift; sourceTree = "<group>"; };
+		4081657D2815723A002D3462 /* FeatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureController.swift; sourceTree = "<group>"; };
+		4081657F2815C9C9002D3462 /* PinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +172,13 @@
 			isa = PBXGroup;
 			children = (
 				404EA2FD280BEEA000E5B17F /* InterfaceController.swift */,
+				406130BC28107E4B0065EF86 /* NearMeController.swift */,
+				4081657B2815714E002D3462 /* PaymentsController.swift */,
+				4081657F2815C9C9002D3462 /* PinController.swift */,
 				406130BA280F24B30065EF86 /* HomeController.swift */,
+				4081657D2815723A002D3462 /* FeatureController.swift */,
 				404EA2FF280BEEA000E5B17F /* ExtensionDelegate.swift */,
+				4081657928155611002D3462 /* LocationManager.swift */,
 				406130B8280F228D0065EF86 /* RowController.swift */,
 				404EA301280BEEA000E5B17F /* NotificationController.swift */,
 				404EA303280BEEA000E5B17F /* ComplicationController.swift */,
@@ -379,11 +394,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				406130B9280F228D0065EF86 /* RowController.swift in Sources */,
+				406130BD28107E4B0065EF86 /* NearMeController.swift in Sources */,
 				404EA302280BEEA000E5B17F /* NotificationController.swift in Sources */,
 				406130BB280F24B40065EF86 /* HomeController.swift in Sources */,
+				4081657C2815714E002D3462 /* PaymentsController.swift in Sources */,
+				4081657A28155611002D3462 /* LocationManager.swift in Sources */,
+				4081657E2815723A002D3462 /* FeatureController.swift in Sources */,
 				404EA304280BEEA000E5B17F /* ComplicationController.swift in Sources */,
 				404EA300280BEEA000E5B17F /* ExtensionDelegate.swift in Sources */,
 				404EA2FE280BEEA000E5B17F /* InterfaceController.swift in Sources */,
+				408165802815C9C9002D3462 /* PinController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,11 +12,11 @@
                 <controller identifier="login" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestApp_WatchKit_App" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="SiS-G2-ybV"/>
-                        <button width="1" alignment="left" title="Click to Login" id="VM0-d4-TJS">
+                        <authorizationAppleIDButton width="1" alignment="left" id="icb-3A-kcF">
                             <connections>
-                                <action selector="loginButtonTapped" destination="AgC-eL-Hgc" id="VpR-T6-MIP"/>
+                                <action selector="loginButtonTapped" destination="AgC-eL-Hgc" id="LtR-aJ-eAk"/>
                             </connections>
-                        </button>
+                        </authorizationAppleIDButton>
                     </items>
                 </controller>
             </objects>
@@ -55,20 +55,41 @@
                 <controller identifier="myCiti" id="hFe-Lr-H8O">
                     <items>
                         <label alignment="left" text="myCiti" id="gxi-oa-mRO"/>
-                        <button width="1" alignment="left" title="Add Item" id="BlU-f0-zvg"/>
-                        <label alignment="left" text="Label" id="hVK-Tf-Fwt"/>
+                        <label width="136" height="21" alignment="left" text="XXXXXXXX3456" textAlignment="left" numberOfLines="2" id="Zuy-CY-HzL"/>
+                        <label alignment="left" text="Available Balance" id="yMk-Ck-mCh"/>
+                        <label width="136" height="22" alignment="left" text="6700INR" textAlignment="center" baselineAdjustment="alignCenters" id="uGe-Y2-kex">
+                            <color key="textColor" red="0.0127512562" green="1" blue="0.01630633226" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="68" y="169"/>
+            <point key="canvasLocation" x="68" y="185"/>
         </scene>
         <!--payments-->
         <scene sceneID="dcc-UO-moN">
             <objects>
-                <controller identifier="payments" id="B1f-Ew-fEO">
+                <controller identifier="payments" id="B1f-Ew-fEO" customClass="PaymentsController" customModule="TestApp_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Payments" id="ZjA-Id-ZRE"/>
+                        <table alignment="left" id="7om-ER-4Lf">
+                            <items>
+                                <tableRow identifier="FeatureController" id="Hio-pf-uHO" customClass="FeatureController" customModule="TestApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="uhf-99-voE">
+                                        <items>
+                                            <label width="136" height="41" alignment="left" text="Label" id="LLb-f4-ZTa"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="paymentActions" destination="LLb-f4-ZTa" id="7Es-kv-URh"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
+                    <connections>
+                        <outlet property="paymentTable" destination="7om-ER-4Lf" id="t8W-8q-Dmn"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="516" y="-143"/>
@@ -100,20 +121,81 @@
         <!--nearMe-->
         <scene sceneID="96x-Hx-9l4">
             <objects>
-                <controller identifier="nearMe" id="R9n-QT-bnH">
+                <controller identifier="nearMe" id="R9n-QT-bnH" customClass="NearMeController" customModule="TestApp_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Near Me" id="jnc-QD-lLR"/>
+                        <map width="134" height="128" alignment="left" id="Cwn-gq-E2v"/>
+                    </items>
+                    <connections>
+                        <outlet property="mapObject" destination="Cwn-gq-E2v" id="NO9-q1-OxZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="291" y="169.5"/>
+        </scene>
+        <!--enterPin-->
+        <scene sceneID="biq-S6-hky">
+            <objects>
+                <controller identifier="enterPin" id="41g-LP-WAP" customClass="PinController" customModule="TestApp_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Enter PIN" id="cdf-Ae-AmH"/>
+                        <textField width="1" alignment="left" text="Text" id="ZBf-JG-Yul">
+                            <connections>
+                                <action selector="textFieldAction:" destination="41g-LP-WAP" id="RoD-fP-gSE"/>
+                            </connections>
+                        </textField>
+                        <label alignment="left" text="Label" id="Qsj-ki-s8R"/>
+                    </items>
+                    <connections>
+                        <outlet property="enterPin" destination="ZBf-JG-Yul" id="7bk-Kb-jUT"/>
+                        <outlet property="mess" destination="Qsj-ki-s8R" id="Xt6-eH-n8b"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="508" y="117"/>
+        </scene>
+        <!--failed-->
+        <scene sceneID="zyQ-qj-wmq">
+            <objects>
+                <controller identifier="failed" id="9EA-ML-iF2">
+                    <items>
+                        <label width="136" height="42" alignment="left" text="Payment" textAlignment="left" baselineAdjustment="alignCenters" id="RUs-l9-F9g">
+                            <color key="textColor" red="0.86078917980000003" green="0.2345388196" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <label width="136" height="48" alignment="left" text="Failed" textAlignment="left" baselineAdjustment="alignCenters" id="0dG-HX-xJ1">
+                            <color key="textColor" red="0.86078917980000003" green="0.2345388196" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="291" y="169"/>
+            <point key="canvasLocation" x="738" y="-161"/>
+        </scene>
+        <!--success-->
+        <scene sceneID="fbk-Zp-FOo">
+            <objects>
+                <controller identifier="success" id="P66-Od-ldU">
+                    <items>
+                        <label width="136" height="42" alignment="left" text="Payment" textAlignment="left" baselineAdjustment="alignCenters" id="4ps-ea-agl">
+                            <color key="textColor" red="0.0127512562" green="1" blue="0.01630633226" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <label width="136" height="48" alignment="left" text="Success" textAlignment="left" baselineAdjustment="alignCenters" id="tT8-uH-MXT">
+                            <color key="textColor" red="0.0" green="1" blue="0.019382316793191912" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="738" y="116"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="TestApp_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="721" y="643"/>
         </scene>
     </scenes>
 </document>
